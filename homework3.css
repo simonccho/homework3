@@ -1,0 +1,208 @@
+* {
+    font-family: "Trebuchet MS", monospace;
+    margin: 0;
+}
+
+body {
+    background: rgba(175, 175, 175, 0.3) url(background.jpeg) no-repeat center center / cover;
+    background-blend-mode: darken;
+    color: black;
+}
+
+input,
+select {
+    font-size: medium;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+
+/*Header*/
+.topTable {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.topper td {
+    text-align: center;
+}
+
+.logoColumn {
+    width: 20%;
+}
+
+.titleColumn {
+    text-align: center;
+}
+
+.dateColumn {
+    width: 20%;
+    text-align: right;
+}
+
+/*form instructions*/
+.topPart {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*patient form*/
+.patientForm {
+    min-width: 30rem;
+    width: fit-content;
+    margin: auto;
+    background-color: rgb(166, 255, 185);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 5px 0 rgba(71, 71, 71, 0.5);
+    margin-bottom: 5rem;
+}
+
+/*name*/
+.nameField {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*gender row*/
+.genderCol {
+    display: inline-block;
+}
+
+/*field size*/
+#firstName,
+#lastName {
+    width: 11rem;
+}
+
+#middleInitial {
+    width: 2rem;
+}
+
+#city,
+#zip {
+    width: 12rem;
+}
+
+#state {
+    width: 12.4rem;
+}
+
+#email,
+#userID,
+#password,
+#passwordCheck,
+#addressLine1,
+#addressLine2,
+#SSN,
+#phone {
+    width: 25rem;
+}
+
+/*lower half*/
+.rb {
+    margin-right: 1rem;
+}
+
+textarea {
+    max-width: 33rem;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+}
+
+input[type="range"] { 
+    width: 8em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sliderValue {
+    text-align: right;
+    margin-right: 10rem;
+}
+
+.endOfFormButtons {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.thankyousubmission {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+button:hover,
+#submit:hover,
+#clear:hover,
+#getdata:hover {
+    transition: 0.3s ease-in-out;
+    background-color: grey;
+}
+
+button,
+#submit,
+#clear,
+#getdata {
+    font-size: medium;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin: 0.3rem;
+}
+
+/*output styling*/
+.output {
+    width: fit-content;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
+    border-radius: 0.5em;
+}
+.output th{
+    float: none;
+    text-align: center;
+    font-size: xx-large;
+}
+.outputData{
+    min-width: 12em;
+    max-width: 18em;
+    width: fit-content;
+    background-color: rgb(220, 252, 225);
+    text-align: left;
+    float: none;
+    padding: 0.5em;
+    border-spacing: 0.1em;
+    border-radius: 0.25em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+.outputName{
+    min-width: 6em;
+    max-width: 18em;
+    width:fit-content;
+    text-align:left;
+    float:none;
+}
+
+/*errors*/
+.error,
+.pwderror {
+    color: red;
+    font-family: Sans-Serif;
+    font-size: 0.65em;
+}
