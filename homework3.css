@@ -142,22 +142,30 @@ footer {
     margin-bottom: 3rem;
 }
 
+
+/*buttons*/
 button:hover,
-#submit:hover,
+#submit:enabled:hover,
 #clear:hover,
-#getdata:hover {
+#getdata:hover,
+#validate:hover {
     transition: 0.3s ease-in-out;
     background-color: grey;
 }
-
 button,
 #submit,
 #clear,
-#getdata {
+#getdata,
+#validate {
     font-size: medium;
     padding: 0.3rem;
     border-radius: 0.3rem;
     margin: 0.3rem;
+}
+
+#submit:disabled{
+    background-color: none;
+    cursor: not-allowed;
 }
 
 /*output styling*/

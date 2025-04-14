@@ -62,24 +62,24 @@
                 </td>
                 <td class="nameField">
                     <input type="text" id="middleInitial" name="Middle Initial" size="3" maxlength="1" pattern="[A-Z]"
-                        placeholder="MI" title="One capital letter only" onkeyup="middleInitialValidation()" 
-                        oninvalid="this.setCustomValidity('One capital letter only')" 
+                        placeholder="MI" title="One capital letter only" onkeyup="middleInitialValidation()"
+                        oninvalid="this.setCustomValidity('One capital letter only')"
                         oninput="this.setCustomValidity('')">
-                        <br>
-                        <div class="error" id="middleInitialError"></div>
+                    <br>
+                    <div class="error" id="middleInitialError"></div>
                 </td>
                 <td class="nameField">
                     <input type="text" id="lastName" name="Last Name" size="20" minlength="1" maxlength="30"
                         pattern="^[a-zA-Z](?:[ '\-a-zA-Z2-5]?[a-zA-Z2-5])*$"
-                        title="Letters, apostrophes, numbers 2-5, and dashes only" placeholder="Last name" onkeyup="lastNameValidation()" 
-                        oninvalid="this.setCustomValidity('Letters, apostrophes, numbers 2-5, and dashes only')" 
-                        oninput="this.setCustomValidity('')"
-                        required>
-                        <br>
-                        <div class="error" id="lastNameError"></div>
+                        title="Letters, apostrophes, numbers 2-5, and dashes only" placeholder="Last name"
+                        onkeyup="lastNameValidation()"
+                        oninvalid="this.setCustomValidity('Letters, apostrophes, numbers 2-5, and dashes only')"
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="lastNameError"></div>
                 </td>
             </tr>
- 
+
             <!--gender-->
             <tr>
                 <td>
@@ -109,10 +109,9 @@
                         pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter a valid email address"
                         placeholder="Email address" onkeyup="emailValidation()"
                         oninvalid="this.setCustomValidity('Enter a valid email address')"
-                        oninput="this.setCustomValidity('')"
-                        required>
-                        <br>
-                        <div class="error" id="emailError"></div>
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="emailError"></div>
                 </td>
             </tr>
 
@@ -125,10 +124,9 @@
                     <input type="text" id="userID" name="User ID" size="51" maxlength="20"
                         pattern="[A-Za-z]+[A-Za-z0-9-_]{8,}" placeholder="User ID" onkeyup="userValidation()"
                         oninvalid="this.setCustomValidity('User ID must start with a letter and be at least 8 characters long')"
-                        oninput="this.setCustomValidity('')"
-                        required>
-                        <br>
-                        <div class="error" id="userIDError"></div>
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="userIDError"></div>
                 </td>
             </tr>
 
@@ -140,22 +138,21 @@
                 <td>
                     <input type="password" id="password" name="Password" size="51" maxlength="30"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        onkeyup="passwordValidation(); passwordCheckValidation();" 
-                        title="Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters" 
-                        placeholder="password" 
-                        oninvalid="this.setCustomValidity('Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters')" 
-                        oninput="this.setCustomValidity('')"
-                        required> 
-                        <br>
-                        <div class="error" id="passwordError"></div>
-                        <div class="pwderror">
-                            <div id="msg1"></div>
-                            <div id="msg2"></div>
-                            <div id="msg3"></div>
-                            <div id="msg4"></div>
-                            <div id="msg5"></div>
-                            <div id="msg6"></div>
-                        </div>
+                        onkeyup="passwordValidation(); passwordCheckValidation();"
+                        title="Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"
+                        placeholder="password"
+                        oninvalid="this.setCustomValidity('Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters')"
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="passwordError"></div>
+                    <div class="pwderror">
+                        <div id="msg1"></div>
+                        <div id="msg2"></div>
+                        <div id="msg3"></div>
+                        <div id="msg4"></div>
+                        <div id="msg5"></div>
+                        <div id="msg6"></div>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -166,12 +163,11 @@
                     <input type="password" id="passwordCheck" name="Password Check" size="51" maxlength="30"
                         placeholder="Re-enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"
-                        onkeyup="passwordCheckValidation()" 
+                        onkeyup="passwordCheckValidation()"
                         oninvalid="this.setCustomValidity('Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters')"
-                        oninput="this.setCustomValidity('')"
-                        required>
-                        <br>
-                        <div class="error" id="passwordCheckError"></div>
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="passwordCheckError"></div>
                 </td>
             </tr>
 
@@ -183,12 +179,12 @@
                 </td>
                 <td>
                     <input type="text" id="addressLine1" name="Address Line 1" size="51" minlength="2" maxlength="30"
-                        title="At least 1 address line required" placeholder="Address line 1" onkeyup = "addressOneValidation()"
+                        title="At least 1 address line required" placeholder="Address line 1"
+                        onkeyup="addressOneValidation()"
                         oninvalid="this.setCustomValidity('At least 1 address line required')"
-                        oninput="this.setCustomValidity('')"
-                        required>
-                        <br>
-                        <div class="error" id="addressLine1Error"></div>
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="addressLine1Error"></div>
                 </td>
             </tr>
 
@@ -211,12 +207,11 @@
                 <td>
                     <input type="text" id="phone" name="phone" size="51" maxlength="12"
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Enter a valid phone number"
-                        placeholder="XXX-XXX-XXXX" onkeyup="phoneValidation()" 
-                        oninvalid="this.setCustomValidity('Enter a valid phone number')" 
-                        oninput="this.setCustomValidity('')"
-                        required>
-                        <br>
-                        <div class="error" id="phoneError"></div>
+                        placeholder="XXX-XXX-XXXX" onkeyup="phoneValidation()"
+                        oninvalid="this.setCustomValidity('Enter a valid phone number')"
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="phoneError"></div>
                 </td>
             </tr>
 
@@ -227,12 +222,11 @@
                 </td>
                 <td>
                     <input type="password" id="SSN" name="SSN" size="51" maxlength="11"
-                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" title="Enter a valid SSN" placeholder="XXX-XX-XXXX" onkeyup="SSNValidation()" 
-                        oninvalid="this.setCustomValidity('Enter a valid SSN')" 
-                        oninput="this.setCustomValidity('')"
-                        required>
-                        <br>
-                        <div class="error" id="SSNError"></div>
+                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" title="Enter a valid SSN" placeholder="XXX-XX-XXXX"
+                        onkeyup="SSNValidation()" oninvalid="this.setCustomValidity('Enter a valid SSN')"
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="SSNError"></div>
                 </td>
             </tr>
 
@@ -243,7 +237,11 @@
                 </td>
                 <td>
                     <input type="text" id="city" name="City" size="25" minlength="2" maxlength="30"
-                        title="City is required" placeholder="City" required>
+                        title="City is required" placeholder="City" onkeyup="cityValidation()"
+                        oninvalid="this.setCustomValidity('City is required')" oninput="this.setCustomValidity('')"
+                        required>
+                    <br>
+                    <div class="error" id="cityError"></div>
                 </td>
             </tr>
 
@@ -253,7 +251,9 @@
                     <label class="state" for="state">State:</label>
                 </td>
                 <td>
-                    <select id="state" name="State" title="State is required" required>
+                    <select id="state" name="State" title="State is required" onchange="stateValidation()"
+                        oninvalid="this.setCustomValidity('State is required')" oninput="this.setCustomValidity('')"
+                        required>
                         <!--list of states: https://www.freeformatter.com/usa-state-list-html-select.html#stateiso-->
                         <option value="" disabled selected>Choose State</option>
                         <option value="AL">Alabama</option>
@@ -309,6 +309,8 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
+                    <br>
+                    <div class="error" id="stateError"></div>
                 </td>
             </tr>
             <!--ZIP code-->
@@ -319,7 +321,11 @@
                 <td>
                     <input type="text" id="zip" name="ZIP code" size="25" minlength="5" maxlength="10"
                         pattern="^[0-9]{5}(?:-[0-9]{4})?$" title="5 Digit Zip/Postal Code is required"
-                        placeholder="XXXXX" required>
+                        placeholder="XXXXX" onkeyup="zipValidation()"
+                        oninvalid="this.setCustomValidity('5 Digit Zip/Postal Code is required')"
+                        oninput="this.setCustomValidity('')" required>
+                    <br>
+                    <div class="error" id="zipError"></div>
                 </td>
             </tr>
             <!--text area-->
@@ -378,38 +384,41 @@
                 <td colspan="3">
                     <ins><label for="daySlider">How long has the issue persisted?:</label></ins>
                     1 Day
-                    <input id="persistenceOfIssue" type="range" min=1 max=10 step="1" class="slider" name="Days of Condition"
-                        oninput="slide(this.value)">
+                    <input id="persistenceOfIssue" type="range" min=1 max=10 step="1" class="slider"
+                        name="Days of Condition" oninput="slide(this.value)">
                     7+ days
                     <div class="sliderValue" id="sliderValue"></div>
                 </td>
             </tr>
 
-            <!--today's date-->
+            <!--date of birth-->
             <tr>
                 <td colspan="3">
-                    <label for="appointmentDate">Date of Birth:</label>
+                    <label for="dateOfBirth">Date of Birth:</label>
                     <br>
-                    <input type="date" id="appointmentDate" name="Date of Appointment" min="1925-01-02" max="2025-12-31" required>
+                    <input type="date" id="dateOfBirth" name="Date of Birth" min="1925-01-02" max="2025-12-31"
+                        onblur="dateOfBirthValidation()" required>
+                    <br>
+                    <div class="error" id="dateOfBirthError"></div>
                 </td>
             </tr>
 
-              <!--output-->
-              <tr>
+            <!--output-->
+            <tr>
                 <td colspan="3">
                     <div id="outputformdata"></div>
                 </td>
             </tr>
 
-            <!--submit, clear, and data review-->
+            <!--submit, clear, data review, and validate-->
             <tr>
                 <td colspan="3" class="endOfFormButtons">
-                    <input type="submit" id="submit" value="SUBMIT">
+                    <input type="submit" id="submit" value="SUBMIT" disabled>
                     <input type="reset" id="clear" value="CLEAR">
                     <input type="button" id="getdata" value="GET DATA" onclick="getData()">
+                    <input type="button" id="validate" value="VALIDATE" onclick="validateAll()">
                 </td>
             </tr>
-
 
         </table>
     </form>

@@ -169,6 +169,72 @@ function SSNValidation() {
     }
 }
 
+// city validation
+function cityValidation() {
+    const city = document.getElementById("city").value;
+    const cityPattern = /^[a-zA-Z\s]*$/;
+    const error = document.getElementById("cityError");
+
+    if (city === "") {
+        error.innerHTML = "City must not be empty";
+        return false;
+    } else if (!city.match(cityPattern)) {
+        error.innerHTML = "City must be valid";
+        return false;
+    } else {
+        error.innerHTML = "";
+        return true;
+    }
+}
+
+// state validation
+function stateValidation() {
+    const state = document.getElementById("state").value;
+    const error = document.getElementById("stateError");
+
+    if (state === "") {
+        error.innerHTML = "State must not be empty";
+        return false;
+    } else {
+        error.innerHTML = "";
+        return true;
+    }
+}
+
+// ZIP code validation
+function zipValidation() {
+    const zipInput = document.getElementById("zip");
+    const maxlength = zipInput.getAttribute("maxlength");
+    let zip = zipInput.value.replace(/\D/g, "");
+    let formattedValue = "";
+
+    if (zip.length > 5) {
+        formattedValue = zip.slice(0, 5) + "-" + zip.slice(5);
+    } else {
+        formattedValue = zip;
+    }
+    zipInput.value = formattedValue;
+
+    if (formattedValue.length > maxlength) {
+        formattedValue = formattedValue.slice(0, maxlength);
+        zipInput.value = formattedValue;
+    }
+
+    const zipPattern = /^[0-9]{5}(?:-[0-9]{4})?$/;
+    const error = document.getElementById("zipError");
+
+    if (formattedValue === "") {
+        error.innerHTML = "ZIP must not be empty";
+        return false;
+    } else if (!formattedValue.match(zipPattern)) {
+        error.innerHTML = "Format: XXXXX or XXXXX-XXXX";
+        return false;
+    } else {
+        error.innerHTML = "";
+        return true;
+    }
+}
+
 // user ID validation
 function userValidation() {
     const userID = document.getElementById("userID").value;
@@ -300,6 +366,27 @@ function passwordCheckValidation() {
     }
 }
 
+// date of birth validation
+function dateOfBirthValidation() {
+    const dateOfBirthInput = document.getElementById("dateOfBirth");
+    const date = new Date(dateOfBirthInput.value);
+    const maxAge = new Date().setFullYear(new Date().getFullYear() - 120);
+    const error = document.getElementById("dateOfBirthError");
+
+    if (date > new Date() || date < new Date(maxAge)) {
+        error.innerHTML = "Please enter a date that is not in the future or more than 120 years ago";
+        dateOfBirthInput.value = "";
+        return false;
+    } 
+    else if (dateOfBirthInput.value === "") {
+        error.innerHTML = "Date of birth must not be empty";
+        return false;
+    } else {
+        error.innerHTML = "";
+        return true;
+    }
+}
+
 // get user data
 function getData() {
     var formcontent = document.getElementById("signup");
@@ -337,5 +424,57 @@ function getData() {
     if (formoutput.length > 0) {
         formoutput += "</table>";
         document.getElementById("outputformdata").innerHTML = formoutput;
+    }
+}
+
+// validate all inputs
+function validateAll() {
+    let valid = true;
+    if (!firstNameValidation()) {
+        valid = false;
+    }
+    if (!lastNameValidation()) {
+        valid = false;
+    }
+    if (!addressOneValidation()) { 
+        valid = false;
+    }
+    if (!zipValidation()) {
+        valid = false;
+    }
+    if (!phoneValidation()) {
+        valid = false;
+    }
+    if (!emailValidation()) {
+        valid = false;
+    }
+    if (!SSNValidation()) {
+        valid = false;
+    }
+    if (!userValidation()) {
+        valid = false;
+    }
+    if (!passwordValidation()) {
+        valid = false;
+    }
+    if (!passwordCheckValidation()) {
+        valid = false;
+    }
+    if (!dateOfBirthValidation()) {
+        valid = false;
+    }
+    if (!addressOneValidation()) {
+        valid = false;
+    }
+    if (!cityValidation()) {
+        valid = false;
+    }
+    if (!stateValidation()) {
+        valid = false;
+    }
+    if (valid) {
+        document.getElementById("submit").disabled = false;
+    } else {
+        alert("Please fix the indicated errors!");
     }
 }
